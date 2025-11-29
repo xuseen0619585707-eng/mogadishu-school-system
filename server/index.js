@@ -14,10 +14,14 @@ app.use(express.json()); // <--- This fixes your error!
 // 2. DATABASE CONNECTION
 // ==========================================
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'mogadishu_school'
+    host: 'gateway01.ap-northeast-1.prod.aws.tidbcloud.com',
+    port: 4000,
+    user: '254vDti6Z6W7rVJ.root',
+    password: 'wxij0ZNIM6Qp80Hv',
+    database: 'mogadishu_school',  // <--- CHANGE THIS from 'mogadishu_school' to 'test'
+    ssl: {
+        rejectUnauthorized: true
+    }
 });
 
 db.connect((err) => {
