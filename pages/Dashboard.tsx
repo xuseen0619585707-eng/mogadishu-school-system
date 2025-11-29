@@ -40,7 +40,7 @@ const Dashboard: React.FC = () => {
 
   // --- NEW: Fetch Data from Backend ---
   useEffect(() => {
-    fetch('http://localhost:8081/stats')
+    fetch('https://mogadishu-school-system.onrender.com/stats')
       .then(res => res.json())
       .then(data => {
         console.log("Database Data:", data);

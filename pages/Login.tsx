@@ -19,14 +19,14 @@ const Login: React.FC = () => {
     setError('');
 
     try {
-        // Send data to backend
-        const response = await fetch('http://localhost:8081/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password })
-        });
+    // Send data to backend
+    const response = await fetch('https://mogadishu-school-system.onrender.com/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+    });
 
-        const data = await response.json();
+    const data = await response.json();
 
         if (data.status === 'Success') {
             // Login Successful: Update App Context

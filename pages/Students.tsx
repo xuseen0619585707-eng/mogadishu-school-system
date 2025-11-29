@@ -37,7 +37,7 @@ const Students: React.FC = () => {
   // --- 1. FETCH STUDENTS FROM DATABASE ---
   const fetchStudents = async () => {
     try {
-      const response = await fetch('http://localhost:8081/students');
+      const response = await fetch('https://mogadishu-school-system.onrender.com/students');
       const data = await response.json();
       
       // Map Database Snake_case to Frontend CamelCase
